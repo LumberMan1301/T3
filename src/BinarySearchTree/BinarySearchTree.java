@@ -1,24 +1,53 @@
 package BinarySearchTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * Clase del Arbol Binario de Busqueda
+ * @param <T>
+ */
 public class BinarySearchTree<T extends Comparable<T>> {
     private TreeNode<T> root;
 
     //----------------------------------------------------//
+
+    /**
+     * Constructor de la clase Arbol Binario
+     * Se crea vacio puesto que despues se le van a agregar nodos
+     */
     public BinarySearchTree() {
         this.root = null;
     }
 
     //----------------------------------------------------//
+
+    /**
+     * metodo que retorna la raiz del arbol
+     * @return raiz
+     */
     public TreeNode<T> getRoot() {
         return this.root;
     }
 
 
     //----------------------------------------------------//
+
+    /**
+     * metodo para verificar que el dato existe
+     * @param data
+     * @return
+     */
     public boolean contains(T data) {
         return contains(data, this.root);
     }
 
+    /**
+     * metodo recursivo para recorrer el arbol
+     * @param element
+     * @param node
+     * @return
+     */
     private boolean contains(T element, TreeNode<T> node) {
         if (node == null) {
             return false;
@@ -35,25 +64,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return false;
     }
 
-    //----------------------------------------------------//
-    public TreeNode<T> getElement(T element) {
-        return getElement(element, this.root);
-    }
+//----------------------------------------------------//
 
-    private TreeNode<T> getElement(T element, TreeNode<T> node) {
-        if (node == null) {
-            return null;
-        }
-        if (node.getData().compareTo(element) == 0) {
-            return node;
-        }
-        if (node.getData().compareTo(element) < 0) {
-            return getElement(element, node.getRight());
-        }
-        return getElement(element, node.getLeft());
-    }
-
-    //----------------------------------------------------//
+    /**
+     * metodo para Insertar un Nodo al arbol
+     * @param data
+     */
     public void insert(T data) {
         TreeNode<T> nodeAux = new TreeNode(data);
         if (this.root == null) {
@@ -84,6 +100,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     //----------------------------------------------------//
+
+    /**
+     * metodo para remover un nodo de un arbol
+      * @param element
+     */
     public void remove(T element) {
         this.root = remove(element, this.root);
     }
@@ -105,6 +126,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     //----------------------------------------------------//
+
+    /**
+     * metodo para retornar el valor minino de un arbol
+     * @return Nodo menor
+     */
     public T findMin() {
         if (this.getRoot() == null)
             return null;
@@ -113,7 +139,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     }
 
-
+    /**
+     * metodo recursivo para recorrer el arbol
+     * @param node
+     * @return
+     */
     private T findMin(TreeNode node) {
         if (node.getLeft() != null) {
             return findMin(node.getLeft());
@@ -124,6 +154,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     //----------------------------------------------------//
+    /**
+     * metodo para retornar el valor minino de un arbol
+     * @return Nodo Mayor
+     */
     public T findMax() {
         if (this.getRoot() == null)
             return null;
@@ -132,7 +166,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     }
 
-
+    /**
+     * metodo recursivo para recorrer el arbol
+     * @param node
+     * @return
+     */
     private T findMax(TreeNode node) {
         if (node.getRight() != null) {
             return findMax(node.getRight());
@@ -141,17 +179,101 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         }
     }
-
+//####################################################################
     //----------------------------------------------------//
-    public void print() {
-        print(this.root);
+    public void printPostorder(){
+        printPostorder(this.root);
+    }
+    public void printInorder(){
+        printInorder(this.root);
+    }
+    public void printPreorder()   {     printPreorder(root);  }
+//#####################################################################
+
+    private void printPostorder(TreeNode node)
+    {
+        if (node == null)
+            return;
+
+        // first recur on left subtree
+        printPostorder(node.getLeft());
+
+        // then recur on right subtree
+        printPostorder(node.getRight());
+
+        // now deal with the node
+        System.out.print(node.getData() + " ");
     }
 
-    private void print(TreeNode<T> node) {
-        if (node != null) {
-            print(node.getLeft());
-            System.out.print(node.getData() + ", ");
-            print(node.getRight());
+    /* Given a binary tree, print its nodes in inorder*/
+    private void printInorder(TreeNode node)
+    {
+        if (node == null)
+            return;
+
+        /* first recur on left child */
+        printInorder(node.getLeft());
+
+        /* then print the data of node */
+        System.out.print(node.getData() + " ");
+
+        /* now recur on right child */
+        printInorder(node.getRight());
+    }
+
+    /* Given a binary tree, print its nodes in preorder*/
+    private void printPreorder(TreeNode node)
+    {
+        if (node == null)
+            return;
+
+        /* first print data of node */
+        System.out.print(node.getData() + " ");
+
+        /* then recur on left sutree */
+        printPreorder(node.getLeft());
+
+        /* now recur on right subtree */
+        printPreorder(node.getRight());
+    }
+    //#####################################
+    public static void printLevelOrder(TreeNode root)
+    {
+        // Base Case
+        if(root == null)
+            return;
+
+        // Create an empty queue for level order tarversal
+        Queue<TreeNode> q =new LinkedList<TreeNode>();
+
+        // Enqueue Root and initialize height
+        q.add(root);
+
+
+        while(true)
+        {
+
+            // nodeCount (queue size) indicates number of nodes
+            // at current level.
+            int nodeCount = q.size();
+            if(nodeCount == 0)
+                break;
+
+            // Dequeue all nodes of current level and Enqueue all
+            // nodes of next level
+            while(nodeCount > 0)
+            {
+
+                TreeNode node = q.peek();
+                System.out.print(node.getData() + " ");
+                q.remove();
+                if(node.getLeft() != null)
+                    q.add(node.getLeft());
+                if(node.getRight() != null)
+                    q.add(node.getRight());
+                nodeCount--;
+            }
+            System.out.println();
         }
     }
 
