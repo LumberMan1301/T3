@@ -1,6 +1,7 @@
 package Pruebas;
 
 import BinarySearchTree.BinarySearchTree;
+import Estructuras.Lista;
 
 import static BinarySearchTree.BinarySearchTree.printLevelOrder;
 
@@ -33,6 +34,6 @@ public class Pruebas {
     }
 
     public void mezclaArboles(BinarySearchTree tree1, BinarySearchTree tree2){
-
+        Lista
     }
 }
