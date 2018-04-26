@@ -27,8 +27,7 @@ public class Pruebas {
         bt.printPreorder();
         System.out.println(" ");
 
-        printLevelOrder(bt.getRoot());
-
+        
 
     }
 }
