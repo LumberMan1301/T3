@@ -173,13 +173,17 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param node
      * @return
      */
-    private TreeNode findMax(TreeNode node) {
+    private TreeNode<T> findMax(TreeNode<T> node) {
         if (node.getRight() != null) {
             return findMax(node.getRight());
         } else {
             return node;
 
         }
+    }
+    public void diferencia() {
+    	TreeNode<T> x=findMax();
+    	TreeNode<T> y=findMin();
     }
 //####################################################################
     //----------------------------------------------------//
