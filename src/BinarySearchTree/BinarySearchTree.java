@@ -1,5 +1,7 @@
 package BinarySearchTree;
 
+import Estructuras.Cola;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -244,7 +246,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return;
 
         // Create an empty queue for level order tarversal
-        Queue<TreeNode> q =new LinkedList<TreeNode>();
+        Cola<TreeNode> q =new Cola<>();
 
         // Enqueue Root and initialize height
         q.add(root);
