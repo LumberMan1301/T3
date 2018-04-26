@@ -181,8 +181,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
     public void diferencia() {
-    	TreeNode<T> x=findMax();
-    	TreeNode<T> y=findMin();
+        int x = (int)this.findMax().getData();
+        int y = (int)this.findMin().getData();
+        System.out.println("La diferencia entre el nodo mayor "+ x + " y el nodo menor "+ y + " es: " + (x-y));
     }
 //####################################################################
     //----------------------------------------------------//
@@ -242,40 +243,17 @@ public class BinarySearchTree<T extends Comparable<T>> {
         printPreorder(node.getRight());
     }
     //#####################################
-    static void printLevelOrder(TreeNode root, Lista lista)
-    {
-        // Base Case
-        if(root == null)
-            return;
+    public void imprimirEntreConNivel(){
+        imprimirEntreConNivel(this.root, 0);
+    }
 
-        // Create an empty queue for level order tarversal
-        Cola<TreeNode> q =new Cola<TreeNode>();
+    private void imprimirEntreConNivel(TreeNode tmp, int nivel){
 
-        // Enqueue Root and initialize height
-        q.enqueue(root);
+        if(tmp !=null){
+            imprimirEntreConNivel(tmp.getLeft(),nivel+1);
 
-
-        while(true)
-        {
-            // nodeCount (queue size) indicates number of nodes
-            // at current level.
-            int nodeCount = q.size();
-            if(nodeCount == 0)
-                break;
-            // Dequeue all nodes of current level and Enqueue all
-            // nodes of next level
-            while(nodeCount > 0)
-            {
-                TreeNode node = q.peek();
-                lista.add(node.getData());
-                q.dequeue();
-                if(node.getLeft() != null)
-                    q.enqueue(node.getLeft());
-                if(node.getRight() != null)
-                    q.enqueue(node.getRight());
-                nodeCount--;
-            }
-
+            System.out.println(tmp.getData() + "("+nivel+") - ");
+            imprimirEntreConNivel(tmp.getRight(),nivel+1);
         }
     }
 
