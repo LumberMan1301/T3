@@ -25,15 +25,13 @@ public class Pruebas {
         bt.printPreorder();
         System.out.println(" ");
 
-<<<<<<< HEAD
-        
-=======
+
 
     }
     public void mezclaArboles(BinarySearchTree tree1, BinarySearchTree tree2){
         Lista l1 = new Lista();
         Lista l2 = new Lista();
->>>>>>> 74b8761ecdf6ddff745d1ba803b2cf880d6d8aeb
+
 
     }
 }
