@@ -28,7 +28,6 @@ public class Pruebas {
 
         printLevelOrder(bt.getRoot());
 
-        bt.diferenciaMm();
 
     }
 }
