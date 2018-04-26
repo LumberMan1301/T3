@@ -1,5 +1,7 @@
 package BinarySearchTree;
 
+import Estructuras.Cola;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -171,13 +173,17 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param node
      * @return
      */
-    private TreeNode findMax(TreeNode node) {
+    private TreeNode<T> findMax(TreeNode<T> node) {
         if (node.getRight() != null) {
             return findMax(node.getRight());
         } else {
             return node;
 
         }
+    }
+    public void diferencia() {
+    	TreeNode<T> x=findMax();
+    	TreeNode<T> y=findMin();
     }
 //####################################################################
     //----------------------------------------------------//
@@ -244,7 +250,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return;
 
         // Create an empty queue for level order tarversal
-        Queue<TreeNode> q =new LinkedList<TreeNode>();
+        Cola<TreeNode> q =new Cola<>();
 
         // Enqueue Root and initialize height
         q.add(root);

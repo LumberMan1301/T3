@@ -17,8 +17,18 @@
       <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="204">
               <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="720">
+              <caret line="274" column="13" lean-forward="true" selection-start-line="274" selection-start-column="13" selection-end-line="274" selection-end-column="13" />
+=======
+            <state relative-caret-position="-1707">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="29" />
+>>>>>>> 46995132df7de7588cb91951dc3463fca168d0f6
+>>>>>>> 46889bd0f1ce894f890aecb1ddaaaa39d4230832
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#450#451#0" expanded="true" />
@@ -358,7 +368,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524692571697</updated>
       <workItem from="1524692573480" duration="2751000" />
-      <workItem from="1524709397138" duration="10000" />
+      <workItem from="1524709397138" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Inicial, Para reorganizar el proyecto">
       <created>1524692950839</created>
@@ -385,7 +395,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="5227000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="4709000" />
+=======
+    <option name="totallyTimeSpent" value="4605000" />
+>>>>>>> 46995132df7de7588cb91951dc3463fca168d0f6
+>>>>>>> 46889bd0f1ce894f890aecb1ddaaaa39d4230832
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1085,8 +1103,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="204">
           <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="720">
+          <caret line="274" column="13" lean-forward="true" selection-start-line="274" selection-start-column="13" selection-end-line="274" selection-end-column="13" />
+=======
+        <state relative-caret-position="-1707">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="29" />
+>>>>>>> 46995132df7de7588cb91951dc3463fca168d0f6
+>>>>>>> 46889bd0f1ce894f890aecb1ddaaaa39d4230832
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#450#451#0" expanded="true" />

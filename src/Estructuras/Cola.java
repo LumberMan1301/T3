@@ -57,6 +57,10 @@ public class Cola<T> {
         }
     }
 
+    public Nodo peek(){
+        return this.first;
+    }
+
 
     public int size(){
         return capacidad;
