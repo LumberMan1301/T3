@@ -277,16 +277,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    public void diferenciaMm(){
-        diferenciaMm(this.root);
-    }
 
-    private int diferenciaMm(TreeNode<T> root) {
-        //int max = findMax();
-        //int min = findMin();
 
-        return 0;
-
-    }
 
 }
