@@ -3,7 +3,7 @@ package Pruebas;
 import BinarySearchTree.BinarySearchTree;
 import Estructuras.Lista;
 
-import static BinarySearchTree.BinarySearchTree.printLevelOrder;
+
 
 public class Pruebas {
     public static void main(String[] args) {
