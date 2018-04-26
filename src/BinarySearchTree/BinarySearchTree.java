@@ -1,6 +1,7 @@
 package BinarySearchTree;
 
 import Estructuras.Cola;
+import Estructuras.Lista;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -243,46 +244,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         printPreorder(node.getRight());
     }
     //#####################################
-    public static void printLevelOrder(TreeNode root)
-    {
-        // Base Case
-        if(root == null)
-            return;
-
-        // Create an empty queue for level order tarversal
-        Cola<TreeNode> q =new Cola<>();
-
-        // Enqueue Root and initialize height
-        q.add(root);
-
-
-        while(true)
-        {
-
-            // nodeCount (queue size) indicates number of nodes
-            // at current level.
-            int nodeCount = q.size();
-            if(nodeCount == 0)
-                break;
-
-            // Dequeue all nodes of current level and Enqueue all
-            // nodes of next level
-            while(nodeCount > 0)
-            {
-
-                TreeNode node = q.peek();
-                System.out.print(node.getData() + " ");
-                q.remove();
-                if(node.getLeft() != null)
-                    q.add(node.getLeft());
-                if(node.getRight() != null)
-                    q.add(node.getRight());
-                nodeCount--;
-            }
-            System.out.println();
-        }
-    }
-
+   
 
 
 
