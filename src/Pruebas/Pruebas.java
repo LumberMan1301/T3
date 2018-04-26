@@ -26,16 +26,22 @@ public class Pruebas {
         System.out.println(bt.findMin().getData()+"\n");
         System.out.println(bt.findMax().getData()+"\n");
 
+        System.out.println(" Inorder ");
         bt.printInorder();
         System.out.println(" ");
+        System.out.println(" Postorder ");
         bt.printPostorder();
         System.out.println(" ");
+        System.out.println(" Preorder ");
         bt.printPreorder();
         System.out.println(" ");
 
+<<<<<<< HEAD
         mezclaArboles(bt,bt2 );
 
 
+=======
+>>>>>>> bf654b7135a6a1eddf6b60060551951381b49d44
     }
     public static void mezclaArboles(BinarySearchTree tree1, BinarySearchTree tree2){
 
