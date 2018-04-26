@@ -1,7 +1,7 @@
-package Cola;
+package Estructuras;
 
 public class Cola<T> {
-    private node<T> first;
+    private Nodo<T> first;
     private int capacidad;
 
     public Cola(){
@@ -10,13 +10,13 @@ public class Cola<T> {
     }
 
     public void add(T dato){
-        node<T> nodo = new node<T>(dato);
+        Nodo<T> nodo = new Nodo<T>(dato);
         if (capacidad == 0){
             this.first = nodo;
             first.setNext(null);
             capacidad++;
         }else{
-            node<T> current = first;
+            Nodo<T> current = first;
             while (current.getNext() != null){
                 current = current.getNext();
             }
@@ -26,12 +26,12 @@ public class Cola<T> {
         }
     }
 
-    public node<T> getFirst() {
+    public Nodo<T> getFirst() {
         return first;
     }
 
-    public node<T> obtener(){
-        node<T> current = first;
+    public Nodo<T> obtener(){
+        Nodo<T> current = first;
         if (capacidad == 0){
             return null;
         } else if(capacidad == 1){

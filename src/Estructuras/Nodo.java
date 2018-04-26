@@ -1,12 +1,11 @@
-package Cola;
+package Estructuras;
 
-
-public class node <T>{
-    private node<T> next;
+public class Nodo <T>{
+    private Nodo<T> next;
     private T data;
-    private node<T> prev;
+    private Nodo<T> prev;
 
-    public node (T dato){
+    public Nodo (T dato){
         this.data = dato;
         this.next = null;
     }
@@ -19,19 +18,19 @@ public class node <T>{
         this.data = data;
     }
 
-    public node<T> getNext() {
+    public Nodo<T> getNext() {
         return next;
     }
 
-    public void setNext(node<T> next) {
+    public void setNext(Nodo<T> next) {
         this.next = next;
     }
 
-    public node<T> getPrev() {
+    public Nodo<T> getPrev() {
         return prev;
     }
 
-    public void setPrev(node<T> prev) {
+    public void setPrev(Nodo<T> prev) {
         this.prev = prev;
     }
 
