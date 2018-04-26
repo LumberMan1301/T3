@@ -1,4 +1,4 @@
-package Cola;
+package Estructuras;
 
 public class Cola<T> {
     private node<T> first;

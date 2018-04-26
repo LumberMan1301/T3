@@ -14,7 +14,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     /**
      * Constructor de la clase Arbol Binario
-     * Se crea vacio puesto que despues se le van a agregar nodos
+     * Se crea vacio, puesto que despues se le van a agregar nodos
      */
     public BinarySearchTree() {
         this.root = null;
