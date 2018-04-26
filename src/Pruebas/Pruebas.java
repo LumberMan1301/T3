@@ -28,6 +28,8 @@ public class Pruebas {
 
         printLevelOrder(bt.getRoot());
 
+        bt.diferenciaMm();
+
     }
 
     public void mezclaArboles(BinarySearchTree tree1, BinarySearchTree tree2){
