@@ -9,7 +9,7 @@ public class Cola<T> {
         this.capacidad = 0;
     }
 
-    public void add(T dato){
+    public void enqueue(T dato){
         Nodo<T> nodo = new Nodo<T>(dato);
         if (capacidad == 0){
             this.first = nodo;
@@ -26,40 +26,15 @@ public class Cola<T> {
         }
     }
 
-    public Nodo<T> getFirst() {
+    public Nodo<T> peek() {
         return first;
     }
 
-    public Nodo<T> obtener(){
-        Nodo<T> current = first;
-        if (capacidad == 0){
-            return null;
-        } else if(capacidad == 1){
-            first = null;
-            capacidad --;
-            return current;
-        } else{
-            this.first = first.getNext();
-            capacidad --;
-            return current;
-        }
-    }
-    public void clear(){
-        this.first = null;
-        capacidad = 0;
+    public void dequeue(){
+        this.first = this.first.getNext();
+        capacidad--;
     }
 
-    public boolean isEmpty(){
-        if (capacidad==0){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public Nodo peek(){
-        return this.first;
-    }
 
 
     public int size(){
