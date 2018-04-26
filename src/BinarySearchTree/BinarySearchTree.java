@@ -131,7 +131,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * metodo para retornar el valor minino de un arbol
      * @return Nodo menor
      */
-    public T findMin() {
+    public TreeNode findMin() {
         if (this.getRoot() == null)
             return null;
         else
@@ -144,11 +144,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param node
      * @return
      */
-    private T findMin(TreeNode node) {
+    private TreeNode findMin(TreeNode node) {
         if (node.getLeft() != null) {
             return findMin(node.getLeft());
         } else {
-            return (T) node.getData();
+            return node;
 
         }
     }
@@ -158,7 +158,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * metodo para retornar el valor minino de un arbol
      * @return Nodo Mayor
      */
-    public T findMax() {
+    public TreeNode findMax() {
         if (this.getRoot() == null)
             return null;
         else
@@ -171,11 +171,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param node
      * @return
      */
-    private T findMax(TreeNode node) {
+    private TreeNode findMax(TreeNode node) {
         if (node.getRight() != null) {
             return findMax(node.getRight());
         } else {
-            return (T) node.getData();
+            return node;
 
         }
     }
@@ -275,6 +275,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
             }
             System.out.println();
         }
+    }
+
+    public void diferenciaMm(){
+        diferenciaMm(this.root);
+    }
+
+    private int diferenciaMm(TreeNode<T> root) {
+        //int max = findMax();
+        //int min = findMin();
+
+        return 0;
+
     }
 
 }
