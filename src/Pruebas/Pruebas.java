@@ -27,13 +27,11 @@ public class Pruebas {
         bt.printPreorder();
         System.out.println(" ");
 
-        printLevelOrder(bt.getRoot());
-
 
     }
     public void mezclaArboles(BinarySearchTree tree1, BinarySearchTree tree2){
         Lista l1 = new Lista();
         Lista l2 = new Lista();
-        
+
     }
 }
