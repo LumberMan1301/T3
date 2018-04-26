@@ -4,7 +4,7 @@ public class Cola<T> {
     private node<T> first;
     private int capacidad;
 
-    public cola(){
+    public Cola(){
         this.first = null;
         this.capacidad = 0;
     }
@@ -57,17 +57,8 @@ public class Cola<T> {
         }
     }
 
-    public T getI(int i){
-        node<T> aux = this.getFirst();
-        int x = 0;
-        while(x != i){
-            aux = aux.getNext();
-            x++;
-        }
-        return aux.getData();
-    }
 
-    public int getCapacidad(){
+    public int size(){
         return capacidad;
     }
 }
