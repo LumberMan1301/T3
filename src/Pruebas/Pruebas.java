@@ -31,4 +31,9 @@ public class Pruebas {
 
 
     }
+    public void mezclaArboles(BinarySearchTree tree1, BinarySearchTree tree2){
+        Lista l1 = new Lista();
+        Lista l2 = new Lista();
+        
+    }
 }
